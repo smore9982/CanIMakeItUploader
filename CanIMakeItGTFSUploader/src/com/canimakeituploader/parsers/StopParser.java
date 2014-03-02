@@ -6,15 +6,15 @@ import java.util.List;
 import com.canimakeituploader.model.StopModel;
 import com.google.gson.stream.JsonReader;
 
-public class StopParser {
+public class StopParser  implements Parser{
 	List<StopModel> stops = new ArrayList<StopModel>();
 	
-	public void parseStopsFeed(JsonReader jsonReader){
-		try{
-			readStops(jsonReader);		
-		}catch(Exception e){
-			e.printStackTrace();
+	public void parse(JsonReader jsonReader)throws Exception{
+		readStops(jsonReader);				
+		for(int i=0;i<stops.size();i++){
+			System.out.println(stops.get(i));
 		}
+		
 		return;
 	}
 	private void readStops(JsonReader jsonReader) throws Exception {
@@ -54,10 +54,10 @@ public class StopParser {
 				stopLon = jsonReader.nextString();
 			}
 		}
+		jsonReader.endObject();
 		if(stopId!=null && stopId.length() >0){
 			StopModel model = new StopModel(stopId,stopName,stopLat,stopLon);
 			stops.add(model);
 		}
-		jsonReader.endObject();
 	}
 }

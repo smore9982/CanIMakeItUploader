@@ -37,4 +37,8 @@ public class StopModel {
 	public void setStop_lon(String stop_lon) {
 		this.stop_lon = stop_lon;
 	}
+	
+	public String toString(){
+		return "STOP: " + this.stop_id + " " + this.stop_name + " " + this.stop_lat + " " + this.stop_lon;
+	}
 }
