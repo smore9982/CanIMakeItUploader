@@ -3,6 +3,7 @@ package com.canimakeituploader.parsers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.canimakeituploader.dao.StopsDao;
 import com.canimakeituploader.model.StopModel;
 import com.google.gson.stream.JsonReader;
 
@@ -10,7 +11,9 @@ public class StopParser  implements Parser{
 	List<StopModel> stops = new ArrayList<StopModel>();
 	
 	public void parse(JsonReader jsonReader)throws Exception{
-		readStops(jsonReader);				
+		readStops(jsonReader);
+		StopsDao dao = new StopsDao();
+		dao.save(stops);
 		for(int i=0;i<stops.size();i++){
 			System.out.println(stops.get(i));
 		}

@@ -8,5 +8,6 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Sameer/Libaries/google-gson-2.2.4/gson-2.2.4-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/MySqlConnector/mysql-connector-java-5.1.29/mysql-connector-java-5.1.29-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
