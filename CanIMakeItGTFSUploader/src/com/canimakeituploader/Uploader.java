@@ -2,11 +2,9 @@ package com.canimakeituploader;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import com.canimakeituploader.model.StopModel;
 import com.canimakeituploader.parsers.AgencyParser;
 import com.canimakeituploader.parsers.CalendarDatesParser;
 import com.canimakeituploader.parsers.FeedParser;
@@ -15,7 +13,6 @@ import com.canimakeituploader.parsers.ShapesParser;
 import com.canimakeituploader.parsers.StopParser;
 import com.canimakeituploader.parsers.StopTimesParser;
 import com.canimakeituploader.parsers.TripsParser;
-import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 
