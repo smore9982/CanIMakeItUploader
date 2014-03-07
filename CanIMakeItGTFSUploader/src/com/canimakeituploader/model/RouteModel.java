@@ -52,6 +52,10 @@ public class RouteModel {
 		this.route_text_color = route_text_color;
 	}
 	
+	public String toString(){
+		return "Route: " + this.route_id + " " + this.route_short_name + " " + this.route_long_name + " " + this.route_type;
+	}
+	
 	
 	
 }
