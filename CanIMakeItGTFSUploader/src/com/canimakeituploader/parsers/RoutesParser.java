@@ -47,7 +47,7 @@ public class RoutesParser implements Parser {
 		String routeType = "";
 		while(jsonReader.hasNext()){			
 			String name = jsonReader.nextName();			
-			if(name.equals("stop_id")){
+			if(name.equals("route_id")){
 				routeId=jsonReader.nextString();
 			}else if(name.equals("route_short_name")){
 				routeShortName = jsonReader.nextString();
