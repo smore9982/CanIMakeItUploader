@@ -56,9 +56,9 @@ public class RoutesParser implements Parser {
 			}else if(name.equals("route_type")){
 				routeType = jsonReader.nextString();
 			}else if(name.equals("route_color")){
-				routeType = jsonReader.nextString();
+				jsonReader.nextString();
 			}else if(name.equals("route_text_color")){
-				routeType = jsonReader.nextString();
+				jsonReader.nextString();
 			}
 		}
 		RouteModel model = new RouteModel(routeId,routeShortName,routeLongName,routeType);
