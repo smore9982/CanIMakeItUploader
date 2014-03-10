@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/Sameer/Libaries/commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Sameer/Libaries/google-gson-2.2.4/gson-2.2.4.jar">
+	<classpathentry exported="true" kind="lib" path="C:/Users/Sameer/Libaries/google-gson-2.2.4/gson-2.2.4.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Sameer/Libaries/google-gson-2.2.4/gson-2.2.4-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/MySqlConnector/mysql-connector-java-5.1.29/mysql-connector-java-5.1.29-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="/MySqlConnector/mysql-connector-java-5.1.29/mysql-connector-java-5.1.29-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Sameer/Libaries/commons-dbcp-1.4/commons-dbcp-1.4.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Sameer/Libaries/commons-dbcp-1.4/apidocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Sameer/Libaries/commons-pool-1.6/commons-pool-1.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
