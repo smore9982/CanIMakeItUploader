@@ -16,10 +16,6 @@ public class StopTimesParser  implements Parser {
 		readStopTimes(jsonReader);
 		StopTimeDao dao = new StopTimeDao();
 		dao.save(stopTimeModelList);
-		for(int i=0;i<stopTimeModelList.size();i++){
-			System.out.println(stopTimeModelList.get(i));
-		}
-		
 		return;
 	}
 	

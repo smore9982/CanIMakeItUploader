@@ -3,6 +3,7 @@ package com.canimakeituploader.parsers;
 import java.util.ArrayList;
 
 import com.canimakeituploader.Util;
+import com.canimakeituploader.dao.CalendarDateDao;
 import com.canimakeituploader.model.CalendarDateModel;
 import com.google.gson.stream.JsonReader;
 
@@ -11,9 +12,8 @@ public class CalendarDatesParser  implements Parser{
 	
 	public void parse(JsonReader jsonReader) throws Exception{
 		readCalendarDates(jsonReader);
-		for(int i=0;i<calendarDateModels.size();i++){
-			System.out.println(calendarDateModels.get(i));
-		}
+		CalendarDateDao dao = new CalendarDateDao();
+		dao.save(calendarDateModels);
 	}
 	
 	private void readCalendarDates(JsonReader jsonReader) throws Exception{

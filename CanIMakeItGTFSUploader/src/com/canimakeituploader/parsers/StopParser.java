@@ -13,11 +13,7 @@ public class StopParser  implements Parser{
 	public void parse(JsonReader jsonReader)throws Exception{
 		readStops(jsonReader);
 		StopsDao dao = new StopsDao();
-		dao.save(stops);
-		for(int i=0;i<stops.size();i++){
-			System.out.println(stops.get(i));
-		}
-		
+		dao.save(stops);		
 		return;
 	}
 	private void readStops(JsonReader jsonReader) throws Exception {

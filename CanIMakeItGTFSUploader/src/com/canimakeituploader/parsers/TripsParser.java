@@ -13,9 +13,6 @@ public class TripsParser{
 		readTrips(jsonReader);
 		TripsDao dao = new TripsDao();
 		dao.save(tripModels);
-		for(int i=0;i<tripModels.size();i++){
-			System.out.println(tripModels.get(i));
-		}
 	}
 	
 	private void readTrips(JsonReader jsonReader) throws Exception{

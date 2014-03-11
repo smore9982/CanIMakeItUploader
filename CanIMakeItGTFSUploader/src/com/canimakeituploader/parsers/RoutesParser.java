@@ -15,9 +15,6 @@ public class RoutesParser implements Parser {
 		readRoutes(jsonReader);
 		RoutesDao dao = new RoutesDao();
 		dao.save(routes);
-		for(int i=0;i<routes.size();i++){
-			System.out.println(routes.get(i));
-		}
 		return;
 	}
 	
