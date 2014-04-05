@@ -20,6 +20,16 @@ public class Uploader {
 	
 	public static void main(String[] args) throws Exception {
 		String fileName = args[0];
+		String agency = args[1];
+		if(agency.equals("LIRR")){
+			parseLIRRData(fileName);			
+		}else{
+			System.out.println("Invalid agency");
+		}
+	}
+	
+	
+	private static void parseLIRRData(String fileName) throws Exception{
 		File f = new File(fileName);
 		if(f.exists()){
 			InputStream is = new FileInputStream(f);
@@ -35,7 +45,7 @@ public class Uploader {
 					String name = jsonReader.nextName();										
 					if(name.equals("gtfs")){
 						System.out.println("Parsing gtfs");
-						readTransitFeeds(jsonReader);					
+						readLIRRTransitFeeds(jsonReader);					
 					}
 				}
 				catch(Exception e){
@@ -45,10 +55,9 @@ public class Uploader {
 			}
 			jsonReader.endObject();
 		}
-		System.out.println("It Lives");
 	}
 
-	private static void readTransitFeeds(JsonReader jsonReader) throws Exception {
+	private static void readLIRRTransitFeeds(JsonReader jsonReader) throws Exception {
 		jsonReader.beginObject();
 		while(jsonReader.hasNext()){
 			String name = jsonReader.nextName();
