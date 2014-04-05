@@ -15,7 +15,7 @@ public class AgencyDao extends ParentDao {
 		if(connection!=null){
 			try{
 				String insertTableSQL = "INSERT INTO agency (agency_id,agency_name,agency_url,agency_timezone,agency_phone) VALUES (?,?,?,?,?)";
-				String updateTableSQL = "UPDATE trips SET agency_name = ?, agency_url = ?, agency_timezone = ?, agency_phone = ? where agency_id = ?";
+				String updateTableSQL = "UPDATE agency SET agency_name = ?, agency_url = ?, agency_timezone = ?, agency_phone = ? where agency_id = ?";
 				insertStatement = connection.prepareStatement(insertTableSQL);
 				updateStatement = connection.prepareStatement(updateTableSQL);
 					updateStatement.setString(1,model.getAgency_id());
