@@ -38,8 +38,8 @@ public class StopTimeDao extends ParentDao {
 					if(updateStatement.executeUpdate() == 0){	
 						insertStatement.setString(1,model.getTrip_id() + "-"+model.getStop_id() );
 						insertStatement.setString(2,model.getTrip_id() );
-						updateStatement.setTime(3,arrivalTime );
-						updateStatement.setTime(4,departureTime );
+						insertStatement.setTime(3,arrivalTime );
+						insertStatement.setTime(4,departureTime );
 						insertStatement.setString(5,model.getStop_id());
 						insertStatement.setString(6,model.getStop_sequence() );
 						insertStatement.executeUpdate();
