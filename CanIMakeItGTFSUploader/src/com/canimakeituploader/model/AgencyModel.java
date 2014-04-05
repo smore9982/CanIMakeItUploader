@@ -6,6 +6,7 @@ public class AgencyModel {
 	private String agency_url;
 	private String agency_timezone;
 	private String agency_phone;
+	private String agency_shortname;
 	
 	
 	public AgencyModel(String id,String name,String url,String timeZone,String phone){
@@ -45,6 +46,14 @@ public class AgencyModel {
 	}
 	public void setAgency_phone(String agency_phone) {
 		this.agency_phone = agency_phone;
+	}
+
+	public String getAgency_shortname() {
+		return agency_shortname;
+	}
+
+	public void setAgency_shortname(String agency_shortname) {
+		this.agency_shortname = agency_shortname;
 	}
 	
 	
