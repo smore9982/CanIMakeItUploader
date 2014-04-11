@@ -1,8 +1,9 @@
-package com.canimakeituploader.parsers;
+package com.canimakeituploader.parsers.lirr;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.canimakeituploader.Uploader;
 import com.canimakeituploader.Util;
 import com.canimakeituploader.dao.RoutesDao;
 import com.canimakeituploader.dao.StopsDao;
@@ -46,6 +47,7 @@ public class RoutesParser implements Parser {
 			String name = jsonReader.nextName();			
 			if(name.equals("route_id")){
 				routeId=jsonReader.nextString();
+				routeId = Uploader.agencyprefix + routeId;
 			}else if(name.equals("route_short_name")){
 				routeShortName = jsonReader.nextString();
 			}else if(name.equals("route_long_name")){

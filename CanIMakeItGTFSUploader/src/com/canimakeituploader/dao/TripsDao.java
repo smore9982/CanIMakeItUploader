@@ -33,7 +33,7 @@ public class TripsDao extends ParentDao{
 						insertStatement.setString(2,model.getRoute_id() );
 						insertStatement.setString(3,model.getService_id() );
 						insertStatement.setString(4,model.getTrip_headsign());
-						updateStatement.setString(5, model.getDirection_id());
+						insertStatement.setString(5, model.getDirection_id());
 						insertStatement.executeUpdate();
 					}				
 				}

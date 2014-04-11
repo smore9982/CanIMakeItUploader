@@ -1,4 +1,4 @@
-package com.canimakeituploader.parsers;
+package com.canimakeituploader.parsers.lirr;
 
 import com.canimakeituploader.dao.AgencyDao;
 import com.canimakeituploader.model.AgencyModel;

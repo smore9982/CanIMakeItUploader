@@ -1,7 +1,8 @@
-package com.canimakeituploader.parsers;
+package com.canimakeituploader.parsers.lirr;
 
 import java.util.ArrayList;
 
+import com.canimakeituploader.Uploader;
 import com.canimakeituploader.Util;
 import com.canimakeituploader.dao.CalendarDateDao;
 import com.canimakeituploader.model.CalendarDateModel;
@@ -44,6 +45,7 @@ public class CalendarDatesParser  implements Parser{
 			String name = jsonReader.nextName();			
 			if(name.equals("service_id")){
 				serviceId=jsonReader.nextString();
+				serviceId=Uploader.agencyprefix+serviceId;
 			}else if(name.equals("date")){
 				date = jsonReader.nextString();
 			}else if(name.equals("exception_type")){

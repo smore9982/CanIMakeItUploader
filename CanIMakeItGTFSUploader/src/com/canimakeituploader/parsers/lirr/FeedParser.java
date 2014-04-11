@@ -1,4 +1,4 @@
-package com.canimakeituploader.parsers;
+package com.canimakeituploader.parsers.lirr;
 
 import com.canimakeituploader.Util;
 import com.google.gson.stream.JsonReader;

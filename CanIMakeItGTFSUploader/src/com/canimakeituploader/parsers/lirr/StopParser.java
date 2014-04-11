@@ -1,8 +1,9 @@
-package com.canimakeituploader.parsers;
+package com.canimakeituploader.parsers.lirr;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.canimakeituploader.Uploader;
 import com.canimakeituploader.dao.StopsDao;
 import com.canimakeituploader.model.StopModel;
 import com.google.gson.stream.JsonReader;
@@ -45,6 +46,7 @@ public class StopParser  implements Parser{
 			String name = jsonReader.nextName();			
 			if(name.equals("stop_id")){
 				stopId=jsonReader.nextString();
+				stopId=Uploader.agencyprefix + stopId;
 			}else if(name.equals("stop_name")){
 				stopName = jsonReader.nextString();
 			}else if(name.equals("stop_lat")){

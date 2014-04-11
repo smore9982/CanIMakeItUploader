@@ -1,7 +1,8 @@
-package com.canimakeituploader.parsers;
+package com.canimakeituploader.parsers.lirr;
 
 import java.util.ArrayList;
 
+import com.canimakeituploader.Uploader;
 import com.canimakeituploader.Util;
 import com.canimakeituploader.dao.StopTimeDao;
 import com.canimakeituploader.dao.StopsDao;
@@ -48,8 +49,10 @@ public class StopTimesParser  implements Parser {
 			String name = jsonReader.nextName();			
 			if(name.equals("stop_id")){
 				stopId=jsonReader.nextString();
+				stopId = Uploader.agencyprefix + stopId;
 			}else if(name.equals("trip_id")){
 				tripId = jsonReader.nextString();
+				tripId = Uploader.agencyprefix + tripId;
 			}else if(name.equals("departure_time")){
 				departureTime = jsonReader.nextString();
 			}else if(name.equals("arrival_time")){
